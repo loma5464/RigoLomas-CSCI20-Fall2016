@@ -2,7 +2,6 @@
 // Lab 3 Coinstar Emulator
 
 # include <iostream>
-# include <string>
 using namespace std;
 int main ()
 {
@@ -22,7 +21,7 @@ int main ()
     moneyInDimes = (moneyInCents % 25) / 10;
     moneyInNickles = ((moneyInCents % 25) % 10) / 5;
     moneyInPennies = (((moneyInCents % 25) % 10) % 5) / 1;
-    moneyInDollars = static_cast<double>(moneyInCents) / static_cast<double>(100);
+    moneyInDollars = static_cast<double>(moneyInCents) * static_cast<double>(.01);
     moneyKept = moneyInDollars * 0.109;
     moneyForUser = moneyInDollars - moneyKept;
     
