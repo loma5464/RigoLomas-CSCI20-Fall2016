@@ -1,7 +1,8 @@
 // Rigoberto Lomas-Velazco
-//CSCI 20
+// CSCI 20
 // 9-12-16
-// Assignment #1 - Variables
+// Assignment #1 - Variables 
+// Finding out the gross pay and net pay of an employee. 
 
 #include <iostream>
 using namespace std;
