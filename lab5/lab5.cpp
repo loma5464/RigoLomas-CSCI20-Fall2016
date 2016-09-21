@@ -2,17 +2,19 @@
 // Lab 5 Monster Objects
 
 #include <iostream>
-using namespace std;
 #include <string>
+using namespace std;
 
-struct monster{
+
+struct monster
+{
     string name;
     string head;
     string eyes;
     string ears;
     string nose;
     string mouth;
-};
+}
 
 int main () {
     monster monster1;
