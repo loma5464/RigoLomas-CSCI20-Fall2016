@@ -14,7 +14,7 @@ struct monster
     string ears;
     string nose;
     string mouth;
-}
+};
 
 int main () {
     monster monster1;
@@ -64,5 +64,5 @@ int main () {
     cout << "Those parts will all go on " << monster2.name << "'s itty bitty " << monster2.head << " head." << endl;
     cout << endl;
     cout << monster1.name << " and " << monster2.name << " seem like they will be best friends.";
-    
+
 }
