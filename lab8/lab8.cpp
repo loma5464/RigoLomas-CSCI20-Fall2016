@@ -20,7 +20,7 @@ int main()
     float kilograms2; // variable for the toPound function
     float pounds1; // variabke for the toKilo function
     float pounds2; // variable for the toPound function
-    cout << "inpute the weight in pounds: ";
+    cout << "input the weight in pounds: ";
     cin >> pounds1;
     cout << "input the weight in kilograms: ";
     cin >> kilograms2; 
