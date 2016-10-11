@@ -21,7 +21,7 @@ int main()
    getline (cin, name);
    cout << "Enter your filing status (single or married): ";
    cin >> maritalStatus;
-   cout << "Enter the amount of your wages for the last year: $";
+   cout << "Enter the total amount of your wages for the last year: $";
    cin >> grossIncome;
    cout << "Enter the amount of money withheld: $";
    cin >> withheld;
