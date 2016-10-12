@@ -22,7 +22,7 @@ int main()
     cin >> userAnswer;
     if (userAnswer == "yes" || userAnswer == "Yes" || userAnswer == "YES")
     {
-        cout << "Dont screw with it then." << endl;
+        cout << "Good, then don't fuck with it." << endl;
     }
     else 
     {
@@ -31,7 +31,7 @@ int main()
             
             if (userAnswer == "no" || userAnswer == "No" || userAnswer == "NO")
             {
-                cout << "Then just let it die." << endl;
+                cout << "Good, just let it be. Allow it to die in peace." << endl;
             }
             else 
             {
