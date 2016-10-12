@@ -18,7 +18,7 @@ int main()
     string AmPm2;
     char colon;
     
-    /*while (hour < 2)
+   /* while (hour < 2)
     {
         minute = 0;
         
@@ -47,10 +47,6 @@ int main()
     
     while (userStartHour != userEndHour)
     {
-        if (userStartHour > 24)
-        {
-            userStartHour = userStartHour - 24;
-        }
         userStartMinute = 0;
         
         while (userStartMinute <= 59 || userStartMinute <= userEndMinute)
@@ -65,6 +61,11 @@ int main()
             }
             userStartMinute = userStartMinute + 15;
         }
-    ++ userStartHour;
+        ++ userStartHour;
+        if (userStartHour >= 24)
+        {
+            userStartHour = userStartHour - 24;
+        }
+        
     }
 }
