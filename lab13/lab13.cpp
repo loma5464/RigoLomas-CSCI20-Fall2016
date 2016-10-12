@@ -40,18 +40,17 @@ int main()
 
     
     cout << endl;
-    cout << "Enter start military time(ex: 24:00): ";
+    cout << "Enter start military time(ex: 21:00): ";
     cin >> userStartHour >> colon >> userStartMinute;
     cout << "Enter end military time: ";
     cin >> userEndHour >> colon >> userEndMinute;
     
     while (userStartHour != userEndHour)
     {
-        userStartMinute = 0;
         
         while (userStartMinute <= 59 || userStartMinute <= userEndMinute)
         {
-            if(userStartMinute <= 0)
+            if(userStartMinute <= 9)// adds the 0 when the minutes are less than 10. So you don't get 2:1 instead of 2:01
             {
                 cout << userStartHour << ":0" << userStartMinute << endl;
             }
@@ -61,8 +60,8 @@ int main()
             }
             userStartMinute = userStartMinute + 15;
         }
-        ++ userStartHour;
-        if (userStartHour >= 24)
+        ++ userStartHour; // add 1 to the starting hour
+        if (userStartHour >= 24)// this is for when the hour goes over 24 , allowing it to start over at 1
         {
             userStartHour = userStartHour - 24;
         }
