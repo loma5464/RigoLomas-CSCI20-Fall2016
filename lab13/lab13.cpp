@@ -18,7 +18,7 @@ int main()
     string AmPm2;
     char colon;
     
-   /* while (hour < 2)
+    while (hour < 2)
     {
         minute = 0;
         
@@ -36,7 +36,7 @@ int main()
         ++ minute;
         }
         ++ hour;
-    };*/
+    };
 
     
     cout << endl;
@@ -50,7 +50,7 @@ int main()
         
         while (userStartMinute <= 59 || userStartMinute <= userEndMinute)
         {
-            if(userStartMinute <= 9)// adds the 0 when the minutes are less than 10. So you don't get 2:1 instead of 2:01
+            if(userStartMinute <= 9) // adds the 0 when the minutes are less than 10. So you get 2:01 instead of 2:1
             {
                 cout << userStartHour << ":0" << userStartMinute << endl;
             }
@@ -60,11 +60,12 @@ int main()
             }
             userStartMinute = userStartMinute + 15;
         }
-        ++ userStartHour; // add 1 to the starting hour
-        if (userStartHour >= 24)// this is for when the hour goes over 24 , allowing it to start over at 1
-        {
-            userStartHour = userStartHour - 24;
-        }
+    ++ userStartHour; // add 1 to the starting hour
         
+    if (userStartHour >= 24) // this is for when the hour goes over 24 , allowing it to start over at 1
+    {
+        userStartHour = userStartHour - 24;
+    }
+    userStartMinute = userStartMinute - 60;
     }
 }
