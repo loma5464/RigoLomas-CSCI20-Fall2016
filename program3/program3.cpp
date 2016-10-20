@@ -81,6 +81,8 @@ int main()
         cout << endl;
         cout << "Okay we will play " << numGames << " game(s)." << endl;
         cout << "Or until one of us gets the majority of the points." << endl; 
+        cout << "Also, games where we both choose the same thing won't count" << endl;
+        cout << "since neither of us gets a point when that happens." << endl;
         cout << endl;
         while (gamesPlayed < numGames && userPoints <= numGames/2 && compPoints <= numGames/2)
         //  Above line will keep the game going for however many games the user wants to play, or as long as neither player wins a majority of the games (ex. user wins 3 out of the 5 games before even getting to the fifth game)
@@ -109,6 +111,7 @@ int main()
                     cout << "Okay, maybe you didn't unserstand me. When I said 'Choose a weapon.' I meant enter Rock, Paper, or Scissors." << endl;
                     cout << "Now lets try again. Enter Rock, Paper, or Scissors: ";
                     cin  >> answer;
+                    convert(answer);
                     cout << endl;
                     ++frustration;
                 }
@@ -117,6 +120,7 @@ int main()
                     cout << "Alright " << player.getName() << "! You're starting to get on my nerves. I told you I want you to enter either" << endl;
                     cout << "Rock, Paper, or Scissors. So please do it: ";
                     cin  >> answer;
+                    convert(answer);
                     cout << endl;
                     ++frustration;
                 }
@@ -125,6 +129,7 @@ int main()
                     cout << "What is wrong with you? Do you really not know how to spell? I mean I had the" << endl;
                     cout << " words right infront of you. Last chance " << player.getName() << "! Enter rock, paper, or scissors: ";
                     cin  >> answer;
+                    convert(answer);
                     cout << endl;
                     ++frustration;
                 }
