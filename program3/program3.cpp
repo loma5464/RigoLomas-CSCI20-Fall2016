@@ -82,7 +82,7 @@ int main()
         cout << "Okay we will play " << numGames << " game(s)." << endl;
         cout << "Or until one of us gets the majority of the points." << endl; 
         cout << endl;
-        while (gamesPlayed < numGames && userPoints < numGames/2 && compPoints < numGames/2)
+        while (gamesPlayed < numGames && userPoints <= numGames/2 && compPoints <= numGames/2)
         //  Above line will keep the game going for however many games the user wants to play, or as long as neither player wins a majority of the games (ex. user wins 3 out of the 5 games before even getting to the fifth game)
         {
             random = ((rand() % 3) + 1); // Random number generator.
