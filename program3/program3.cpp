@@ -16,7 +16,7 @@
 #include <ctime>
 using namespace std;
 
-class userName 
+class userName // This class will set the name of the user, for when the program needs it.
     {
         private:
         string name;
@@ -63,18 +63,18 @@ int main()
     cout << endl;
     cout << "Enter your name: ";
     cin  >> x;
-    player.setName(x);
+    player.setName(x); // the users name is set
     cout << endl;
-    cout << "Welcome " << player.getName() << "! Would you like to play a game?: ";
+    cout << "Welcome " << player.getName() /*the users name is called*/ << "! Would you like to play a game?: ";
     cin  >> answer;
     cout << endl;
     convert(answer);
-    if (answer == "NO")
+    if (answer == "NO") // if the user doenst want to play the game, the program will end
     {
         cout << "Then quit wasting my time " << player.getName() << " get out of here. Let someone else have a turn . . . jerk." << endl;
         cout << endl;
     }
-    else
+    else // if the user wants to play the game will begin
     {
         cout << "Yay!!! How many games would you like to play: ";
         cin  >> numGames;
@@ -104,9 +104,9 @@ int main()
             cin  >> answer;
             cout << endl;
             convert(answer);
-            if ((frustration <= 4) && (answer != "ROCK") && (answer != "PAPER") && (answer != "SCISSORS"))
+            if ((frustration <= 4) && (answer != "ROCK") && (answer != "PAPER") && (answer != "SCISSORS")) // Conditions for when the user enters an answer that doesnt apply to the game.
             {
-                if (frustration == 1)
+                if (frustration == 1) // first unusable answer ocurrence
                 {
                     cout << "Okay, maybe you didn't unserstand me. When I said 'Choose a weapon.' I meant enter Rock, Paper, or Scissors." << endl;
                     cout << "Now lets try again. Enter Rock, Paper, or Scissors: ";
@@ -115,7 +115,7 @@ int main()
                     cout << endl;
                     ++frustration;
                 }
-                else if (frustration == 2)
+                else if (frustration == 2) // second unusable answer ocurrence
                 {
                     cout << "Alright " << player.getName() << "! You're starting to get on my nerves. I told you I want you to enter either" << endl;
                     cout << "Rock, Paper, or Scissors. So please do it: ";
@@ -124,7 +124,7 @@ int main()
                     cout << endl;
                     ++frustration;
                 }
-                else if (frustration == 3)
+                else if (frustration == 3) // third unusable answer ocurrence
                 {
                     cout << "What is wrong with you? Do you really not know how to spell? I mean I had the" << endl;
                     cout << " words right infront of you. Last chance " << player.getName() << "! Enter rock, paper, or scissors: ";
@@ -133,7 +133,7 @@ int main()
                     cout << endl;
                     ++frustration;
                 }
-                else
+                else // final unusable answer ocurrence, the game will end prematurely
                 {
                     cout << "Thats it " << player.getName() << "! I tried being nice but you obviously just want to keep wasting my time." << endl;
                     cout << "NO GAME FOR YOU!!!" << endl;
@@ -141,7 +141,7 @@ int main()
                 }
             }
             cout << "I choose " << compAnswer << "." << endl;
-            if ((answer == "ROCK" && compAnswer == "SCISSORS") || (answer == "PAPER" && compAnswer == "ROCK") || (answer == "SCISSORS" && compAnswer == "PAPER"))
+            if ((answer == "ROCK" && compAnswer == "SCISSORS") || (answer == "PAPER" && compAnswer == "ROCK") || (answer == "SCISSORS" && compAnswer == "PAPER")) // Conditions for when the user wins a round.            
             {
                 cout << "Oh no! Your "  << answer <<  " beats my " << compAnswer << "! You get a point" << endl;
                 ++userPoints;
@@ -151,7 +151,7 @@ int main()
                 cout << endl;
                 ++gamesPlayed;
             }
-            else if ((compAnswer == "ROCK" && answer == "SCISSORS") || (compAnswer == "PAPER" && answer == "ROCK") || (compAnswer == "SCISSORS" && answer == "PAPER"))
+            else if ((compAnswer == "ROCK" && answer == "SCISSORS") || (compAnswer == "PAPER" && answer == "ROCK") || (compAnswer == "SCISSORS" && answer == "PAPER")) // Conditions for whenthe program wins a round
             {
                 cout << "Yay! My " << compAnswer << " beats your " << answer << ". I get a point!" << endl;
                 cout << endl;
@@ -162,28 +162,29 @@ int main()
                 cout << endl;
                 ++gamesPlayed;
             }
-            else
+            else // Conditions for when the user and the computer pick the same answer
             {
                 cout << "Well thats no fun. We both picked " << answer << "." << endl;
-                cout << "Let's try again.";
+                cout << "Let's try again." << endl;
+                cout << endl;
                 cout << "The score is still." << endl;
                 cout << player.getName() << ": " << userPoints << " points" << endl;
                 cout << "Computer: " << compPoints << " points" << endl;
                 cout << endl;
             }
         }
-        cout << "Alright we've played " << gamesPlayed << " game(s)," << endl;
+        cout << "Alright we've played " << gamesPlayed << " game(s)," << endl; // when the number of desired rounds have been played
         cout << "and the final score is." << endl;
         cout << player.getName() << ": " << userPoints << " points" << endl;
         cout << "Computer: " << compPoints << " points" << endl;
         cout << endl;
-        if (userPoints > compPoints)
+        if (userPoints > compPoints) // conditions for when the player wins
         {
             cout << "Congratulations you win!" << endl;
             cout << "Try not to let it get to your head though." << endl;
             cout << "I'll win next time.";
         }
-        else
+        else // protocol for the computer ins the game
         {
             cout << "HAHAHAHAHAHAHAHA!!!" << endl;
             cout << "I WIN!!! I'M THE BEST IN THE WORLD!!!" << endl;
