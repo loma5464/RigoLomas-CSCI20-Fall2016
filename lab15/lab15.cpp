@@ -21,12 +21,13 @@ int main()
 {
 int i = 0;
 int x = 0;
-int numChoices = 100;
+const int numChoices = 100;
     
     string userChoices[numChoices];
     cout << "Choose one item from the list at a time." << endl;
     cout << "When you're done choosing your items enter 'done'" << endl;
     cout << "into the item select box." << endl;
+    i = 1;
     while (i < numChoices && userChoices[i - 1] != "done")
     {
         cout << endl;
@@ -39,8 +40,8 @@ int numChoices = 100;
         i++;
         x++;
     }
-    for (i = 0; i < x - 1; i++)
+    for (i = 1; i < x - 1; i++)
     {
-        cout << "Your list of choises is " << userChoices[i] << "." << endl;
+        cout << "Your number " << i << " choice was " << userChoices[i] << "." << endl;
     }
 }
