@@ -32,7 +32,7 @@ const int numChoices = 100;
     {
         cout << endl;
         cout << endl;
-        cout << "Apple, Apricot, Avocdo, Banana, Blackberry," << endl;
+        cout << "Apple, Apricot, Avocado, Banana, Blackberry," << endl;
         cout << "Blueberry, Coconut, Lime, Watermelon, Pineapple." << endl;
         cout << endl;
         cout << "Choose one item from the list above: ";
@@ -40,6 +40,8 @@ const int numChoices = 100;
         i++;
         x++;
     }
+    cout << endl;
+    cout << endl;
     for (i = 1; i < x - 1; i++)
     {
         cout << "Your number " << i << " choice was " << userChoices[i] << "." << endl;
