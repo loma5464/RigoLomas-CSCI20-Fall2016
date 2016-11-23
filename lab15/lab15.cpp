@@ -42,7 +42,7 @@ const int numChoices = 100;
     }
     cout << endl;
     cout << endl;
-    for (i = 1; i < x - 1; i++)
+    for (i = 1; i < x; i++)
     {
         cout << "Your number " << i << " choice was " << userChoices[i] << "." << endl;
     }

@@ -30,7 +30,7 @@ double cost = 0;
     string answer[numChoices];
     string userChoices[] = {"APPLE", "APRICOT", "AVOCADO", "BANANA", "BLACKBERRY", "BLUEBERRY", "COCONUT", "LIME", "WATERMELON", "PINEAPPLE"};
     float prices[] = {3.98, 2.99, 1.05, 0.45, 2.16, 2.95, 4.50, 0.29, 2.76, 3.98};
-    int inventory[] = {2, 10, 10, 10, 10, 10, 10, 10, 10 ,10};
+    int inventory[] = {10, 10, 10, 10, 10, 10, 10, 10, 10 ,10};
     cout << "Choose one item from the list at a time." << endl;
     cout << "When you're done choosing your items enter 'done'" << endl;
     cout << "into the item select box." << endl;
@@ -60,7 +60,7 @@ double cost = 0;
         cout << "Choose another item from the list above: " << endl;
         cin  >> answer[x];
         convert(answer[x]);
-        while (answer[x] != userChoices[i] && i < 10)
+        while (answer[x] != userChoices[i] && i < 10) // Checks to find the item chosen
         {
             i++;
         }
